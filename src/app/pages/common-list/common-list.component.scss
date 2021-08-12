@@ -1,0 +1,42 @@
+
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* &:first-child {
+      border-top: none;
+    } */
+    // :hover {
+    //   opacity: 0.7;
+    //   background-color: aliceblue;
+    // }
+}
+
+:host {
+  ::ng-deep {
+      nb-user.shape-semi-round .user-picture{
+          font-weight: bold;
+          color:white;
+      }
+  }
+}
+
+nb-icon {
+  font-size: 1.55rem;
+
+  ::ng-deep svg {
+    vertical-align: top;
+  }
+}
+
+nb-card {
+  &.own-scroll {
+    height: 50vh;
+  }
+}
+
+.button-group {
+  display: flex;
+}
+

@@ -1,0 +1,6 @@
+<nb-user [picture]="data.picture" [name]="data.listItem.name" [title]="data.listItem.title" [color]="data.listItem.color" size="large"></nb-user>
+<div class="button-group">
+  <button class="control-button" nbButton ghost size="medium" [nbContextMenu]="data.listItem.events" [nbContextMenuTag]="data.listItem.tag">
+    <nb-icon icon="more-horizontal" ata-eva-animation="pulse" pack="eva"></nb-icon>
+  </button>
+</div>

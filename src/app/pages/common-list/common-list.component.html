@@ -1,0 +1,13 @@
+<nb-card class="own-scroll">
+    <nb-list>
+        <nb-list-item class="list-item" [style.background]="c.listItem.selected ? 'rgb(245,230,245)' : 'none'" *ngFor="let c of collection">
+          <nb-user shape="semi-round" [picture]="c.picture" [name]="c.listItem.name" [title]="c.listItem.title" [color]="c.listItem.color" size="large"></nb-user>
+          <div class="button-group">
+            <button class="control-button" [title]="e.title" nbButton ghost size="medium" *ngFor="let e of c.listItem.events" (click)="submitEvent(c,e)">
+              <nb-icon [icon]="e.icon" ata-eva-animation="pulse" pack="eva"></nb-icon>
+            </button>
+          </div>
+          
+        </nb-list-item>
+    </nb-list>
+</nb-card>

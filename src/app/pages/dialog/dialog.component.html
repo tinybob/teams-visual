@@ -1,0 +1,10 @@
+<nb-card>
+    <nb-card-header>
+        {{subject}}
+    </nb-card-header>
+    <nb-card-body [innerHTML]="body.content">
+    </nb-card-body>
+    <nb-card-footer>
+        <button nbButton hero status="primary" (click)="dismiss()">Dismiss</button>
+    </nb-card-footer>
+</nb-card>

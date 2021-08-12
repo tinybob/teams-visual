@@ -1,0 +1,20 @@
+div.row {
+    justify-content: space-between;
+    width: 100%;
+}
+
+#header {
+    display: inline-block;
+    background-color: thistle;
+    height: 1.8rem;
+    margin-bottom: 0.5rem;
+    width: 10%;
+}
+
+#content {
+    display: inline-block;
+    background-color: thistle;
+    height: 1.8rem;
+    margin-bottom: 0.5rem;
+    width: 60%;
+}

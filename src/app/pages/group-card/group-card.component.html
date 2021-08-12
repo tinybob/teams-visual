@@ -1,0 +1,45 @@
+
+<div class="card-row">
+  <div class="card-col" *ngFor="let data of cardData$ | async">
+    <nb-card>
+      <nb-card-header>
+        <nb-user size="large"
+          [name]="data.displayName"
+          [title]="data.description"
+          [picture]="data.photo"
+          color="white"
+          onlyPicture>
+        </nb-user>
+        {{data.displayName}}
+      </nb-card-header>
+      <nb-card-body>
+        <!-- <nb-actions size="small">
+          <nb-action *ngIf="!data.isMember"
+            class="control-item"
+            icon="person-outline"
+            (click)="joinGroup(data)"
+          ></nb-action>
+          <nb-action *ngIf="data.isMember"
+            class="user-action"
+            icon="person-outline"
+            (click)="accessGroup(data)">
+          </nb-action>
+          <nb-action
+            class="control-item"
+            icon="search-outline"
+          ></nb-action>
+          <nb-action
+            class="control-item"
+            icon="question-mark-circle-outline"
+          ></nb-action>
+      
+        </nb-actions> -->
+        {{data.description}}
+      </nb-card-body>
+      <button nbButton fullWidth status="success" *ngIf="data.isMember" (click)="accessGroup(data)">Access</button>
+      <button nbButton fullWidth status="info" *ngIf="!data.isMember" (click)="joinGroup(data)">Join</button>
+      <!-- <div class="join" *ngIf="!data.isMember">Join</div>
+      <div class="access" *ngIf="data.isMember">Access</div> -->
+    </nb-card>
+  </div>
+</div>

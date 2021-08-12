@@ -10,7 +10,8 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~12.0.3",
+    "@angular/animations": "^12.0.5",
+    "@angular/cdk": "^11.0.4",
     "@angular/common": "~12.0.3",
     "@angular/compiler": "~12.0.3",
     "@angular/core": "~12.0.3",
@@ -18,6 +19,11 @@
     "@angular/platform-browser": "~12.0.3",
     "@angular/platform-browser-dynamic": "~12.0.3",
     "@angular/router": "~12.0.3",
+    "@azure/msal-angular": "^2.0.0",
+    "@azure/msal-browser": "^2.14.2",
+    "@nebular/eva-icons": "^7.0.0",
+    "@nebular/theme": "^7.0.0",
+    "eva-icons": "^1.1.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"

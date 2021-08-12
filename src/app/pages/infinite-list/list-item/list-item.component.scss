@@ -1,0 +1,12 @@
+:host {
+    ::ng-deep {
+        nb-user.shape-round .user-picture{
+            font-weight: bold;
+            color:white;
+        }
+    }
+}
+
+.button-group {
+    display: flex;
+}

@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  redirectUri: 'https://teams-visual.azurewebsites.net/auth'
 };
