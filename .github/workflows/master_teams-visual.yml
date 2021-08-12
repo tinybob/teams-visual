@@ -32,7 +32,6 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: teams-visual
-        slot-name: Production
         publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FDD0C292C6E84F8BA15D70E65BDC9EB8 }}
-        package: .
+        package: ./dist/aet-teams-visual
 
