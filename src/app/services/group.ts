@@ -291,7 +291,8 @@ export class GroupUtils {
                         events: [
                             {
                                 title: 'Join',
-                                icon: 'plus'
+                                icon: 'plus',
+                                data: item
                             }
                         ]
                     
@@ -314,11 +315,13 @@ export class GroupUtils {
                         events: [
                             {
                                 title: 'Overview',
-                                icon: 'file-text-outline'
+                                icon: 'file-text-outline',
+                                data:item
                             },
                             {
                                 title: 'ViewInTeams',
-                                icon: 'arrow-forward-outline'
+                                icon: 'arrow-forward-outline',
+                                data: item
                             }
                         ]
                     };

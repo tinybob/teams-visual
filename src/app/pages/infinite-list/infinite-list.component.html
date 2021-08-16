@@ -1,8 +1,8 @@
-<nb-card>
-    <nb-list *ngIf="collection; else loading"
+<nb-card *ngIf="collection; else loading" [class.own-scroll]="collection.selfScroll">
+    <nb-list 
         nbInfiniteList 
-        listenWindowScroll
-        [threshold]="500" 
+        [listenWindowScroll]="!collection.selfScroll"
+        [threshold]="300" 
         (bottomThreshold)="loadNext(collection)">
         <nb-list-item class="list-item" *ngFor="let c of collection?.value">
             <infinite-list-item style="display: flex; justify-content: space-between; width: 100%;" [data]="c"></infinite-list-item>

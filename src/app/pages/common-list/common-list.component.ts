@@ -47,7 +47,7 @@ export class CommonListComponent implements OnInit {
             // refresh event collection
             this.groupUtils.getEvent().subscribe(
               next => {
-                this.collection = next;
+                this.collection = next.value;
               },
               err => {
                 console.error(err);
@@ -64,11 +64,11 @@ export class CommonListComponent implements OnInit {
         this.groupUtils.getPosts(data.id).subscribe(
           next => {
             const res = next;
+            res.selfScroll = true;
             this.nbDialogService.open(InfiniteListComponent, {
               context: {
-                collection: next
+                collection: res
               },
-              hasScroll: true,
               dialogClass: 'dialog-global'
             })
           },

@@ -22,7 +22,9 @@ export class EventsHandler {
                             { status: 'success', duration: 3000 }
                         )
                         break;
-                
+                    case 'post':
+                        window.open(context.item.data.webUrl);
+                        break;
                     default:
                         break;
                 }
