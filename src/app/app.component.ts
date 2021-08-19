@@ -4,7 +4,7 @@ import { AuthenticationResult, InteractionStatus, InteractionType, PopupRequest,
 import { Subject } from 'rxjs';
 import { filter, takeUntil } from 'rxjs/operators';
 
-import { NbSidebarService } from '@nebular/theme'
+import { NbSidebarService, NbMenuService } from '@nebular/theme'
 
 import { MENU_ITEMS }  from './pages/pages-menu';
 
@@ -30,7 +30,8 @@ export class AppComponent {
     @Inject(MSAL_GUARD_CONFIG) private msalGuardConfig: MsalGuardConfiguration,
     private authService: MsalService,
     private msalBroadcastService: MsalBroadcastService,
-    private sidebarService: NbSidebarService
+    private sidebarService: NbSidebarService,
+    private menuService: NbMenuService
   ) {}
 
   ngOnInit(): void {
@@ -44,6 +45,24 @@ export class AppComponent {
       .subscribe(() => {
         this.setLoginDisplay();
       });
+
+    this.menuService.onItemClick().subscribe(
+      next => {
+        switch (next.item.title) {
+          case 'Logout':
+            this.logout();
+            break;
+          
+          case 'Profile':
+            break;
+          default:
+            break;
+        }
+      },
+      err => {
+        console.error(err);
+      }
+    );
   }
 
   setLoginDisplay() {

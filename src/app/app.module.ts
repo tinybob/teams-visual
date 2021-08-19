@@ -20,7 +20,8 @@ import { NbThemeModule,
   NbActionsModule,
   NbStepperModule,
   NbCardModule,
-  NbToastrModule
+  NbToastrModule,
+  NbTooltipModule
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { TutorialComponent } from './tutorial/tutorial.component';
@@ -103,6 +104,7 @@ export function MSALGuardConfigFactory(): MsalGuardConfiguration {
     NbActionsModule,
     NbCardModule,
     NbStepperModule,
+    NbTooltipModule,
     NbToastrModule.forRoot()
   ],
   providers: [

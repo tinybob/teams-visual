@@ -10,7 +10,8 @@ export class DialogComponent implements OnInit {
 
   @Input() body: any;
   @Input() subject: any;
-
+  @Input() content: any;
+  
   constructor(
     protected ref: NbDialogRef<DialogComponent>
   ) { }
