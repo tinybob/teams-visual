@@ -35,10 +35,10 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.isIframe = window !== window.parent && !window.opener;
-    // this.setLoginDisplay();
+
     this.msalBroadcastService.inProgress$
       .pipe(
-        filter((status: InteractionStatus) => status === InteractionStatus.None),
+        filter((status: InteractionStatus) => status === InteractionStatus.Startup || status === InteractionStatus.None),
         takeUntil(this._destroying$)
       )
       .subscribe(() => {
